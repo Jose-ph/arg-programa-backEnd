@@ -8,6 +8,7 @@ import com.portfolio.demo.Entity.Persona;
 import com.portfolio.demo.Interface.InterfacePersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,10 +24,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
     @Autowired InterfacePersonaService interfacepersonaService;
     
-    @GetMapping("personas/get")
+    @GetMapping("/personas/get")
     public List<Persona> getPersona(){
         return interfacepersonaService.getPersona();
     
@@ -58,5 +60,10 @@ public class PersonaController {
     
     interfacepersonaService.savePersona(persona);
     return persona;
+    }
+    
+    @GetMapping("/personas/get/profile")
+    public Persona findaPersona(){
+    return interfacepersonaService.findPersona((long)1);
     }
 }

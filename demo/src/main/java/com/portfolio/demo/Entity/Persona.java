@@ -34,12 +34,29 @@ public class Persona {
     @Size(min=1, max=50, message="Longitud incorrecta" )
     
     private String apellido;
-    
-       // @NotNull prueba sin img
-    @Size(min=1, max=50, message="Longitud incorrecta" )
+      
+        // @NotNull prueba sin img
+    @Size(min=1, max=2850, message="Longitud incorrecta" )
     
     private String img;
     
+       // @NotNull prueba sin img
+    @Size(min=1, max=2850, message="Longitud incorrecta" )
     
+    private String img_header;
     
+     // @NotNull prueba sin img
+    @Size(min=1, max=2850, message="Longitud incorrecta" )
+    
+    private String img_perfil;
+    
+        @NotNull
+    @Size(min=1, max=300, message="Longitud incorrecta" )
+    
+    private String acerca;
+    
+               @NotNull
+    @Size(min=1, max=300, message="Longitud incorrecta" )
+    
+    private String ocupacion;
 }
