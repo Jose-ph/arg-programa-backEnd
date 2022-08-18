@@ -32,7 +32,7 @@ public class UsuarioService {
         return interfaceusuarioRepository.existByNombreUsuario(nombreUsuario);
     }
    
-      public boolean existsByEmailo(String email){
+      public boolean existsByEmail(String email){
        
         return interfaceusuarioRepository.existByEmail(email);
     }
