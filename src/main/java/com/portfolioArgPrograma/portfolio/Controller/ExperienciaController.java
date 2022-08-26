@@ -39,7 +39,7 @@ public class ExperienciaController {
         return new ResponseEntity(list,HttpStatus.OK);
     
     }
-    @PostMapping("/crear")
+    @PostMapping("/create")
    public ResponseEntity <?> create(@RequestBody DtoExperiencia dtoExperiencia){
        
        if(StringUtils.isBlank(dtoExperiencia.getNombreExperiencia()))
